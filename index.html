@@ -877,7 +877,26 @@ function resetAll() {
 
 // ── INIT ──
 updateSettingDisplays();
-addStandalone();
+items = [
+  {
+    type:'group', id:uid(), groupName:'Core Plank', sets:3,
+    exercises:[
+      { id:uid(), name:'Plank',            mode:'time', value:60 },
+      { id:uid(), name:'Left Side Plank',  mode:'time', value:30 },
+      { id:uid(), name:'Right Side Plank', mode:'time', value:30 },
+      { id:uid(), name:'Plank',            mode:'time', value:60 },
+    ]
+  },
+  {
+    type:'group', id:uid(), groupName:'Ab & Push', sets:3,
+    exercises:[
+      { id:uid(), name:'Leg Raise',     mode:'reps', value:15 },
+      { id:uid(), name:'Russian Twist', mode:'reps', value:30 },
+      { id:uid(), name:'Push Up',       mode:'reps', value:10 },
+    ]
+  }
+];
+renderList();
 </script>
 </body>
 </html>
